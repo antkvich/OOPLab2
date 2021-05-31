@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller">
+   <left>
+        <ToolBar prefHeight="241.0" prefWidth="72.0" BorderPane.alignment="CENTER">
+            <items>
+            <VBox prefHeight="34.0" prefWidth="57.0">
+               <children>
+                      <ToggleButton fx:id="lineTButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="/">
+      
+            import javafx.event.ActionEvent;
+            import javafx.fxml.FXML;
+      import javafx.scene.canvas.Canvas;
+            import javafx.scene.canvas.GraphicsContext;
+      import javafx.scene.control.Button;
+            import javafx.scene.control.ColorPicker;
+      import javafx.scene.control.ToggleButton;
+            import javafx.scene.input.MouseEvent;
+      import javafx.scene.paint.Color;
+            import javafx.scene.paint.Paint;
+      
+            public class Controller {
+            
+                public ColorPicker colorPicker;
+          public Canvas canvas;
+                public ToggleButton lineTButton;
+          public ToggleButton rectangleTButton;
+                public ToggleButton squareTButton;
+          public ToggleButton ellipseTButton;
+                public ToggleButton circleTButton;
+          public Button clearButton;
+            
+                private Color selectedColor;
+          private Shape currentFigure;
+                private Drawer drawer;
+      
+                @FXML
+                public void initialize() {
+              canvas.getParent().setStyle("-package com.company;
+                     <toggleGroup>
+                              <ToggleGroup fx:id="figuresToggleGroup" />
+                          </toggleGroup>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                      </ToggleButton>
+                      <ToggleButton fx:id="ellipseTButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="⬭" toggleGroup="$figuresToggleGroup">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </ToggleButton>
+                      <ToggleButton fx:id="circleTButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="○" toggleGroup="$figuresToggleGroup">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </ToggleButton>
+                      <ToggleButton fx:id="rectangleTButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="▭" toggleGroup="$figuresToggleGroup">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </ToggleButton>
+                      <ToggleButton fx:id="squareTButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="□" toggleGroup="$figuresToggleGroup">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </ToggleButton>
+                      <ColorPicker fx:id="colorPicker" prefHeight="34.0" prefWidth="34.0" promptText="Color" />
+                      <Button fx:id="clearButton" mnemonicParsing="false" text="Clear" />
+               </children>
+            </VBox>
+            </items>
+        </ToolBar>
+   </left>
+   <right>
+      <Canvas fx:id="canvas" height="720.0" width="1200.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
